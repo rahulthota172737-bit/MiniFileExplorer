@@ -1,27 +1,22 @@
 # Mini File Explorer
 
-A console-based File Explorer built using Java.
-
-This project allows users to perform basic file management operations through a menu-driven interface. It is being developed as part of my Java and Object-Oriented Programming learning journey.
+A console-based File Explorer built using Java. This project demonstrates Object-Oriented Programming (OOP), Java File Handling, and directory traversal by implementing common file management operations.
 
 ---
 
 ## Features
 
-### Completed
-- Menu-driven interface
+### ✅ Completed (Day 3)
+
 - Create File
 - Create Folder
 - Delete File/Folder
 - Rename File/Folder
-
-### Planned
-- Search files and folders
-- Display file information
-- List directory contents
-- Exception handling improvements
-- Better validation
-- Logging
+- List Files
+- List Folders
+- Search Files/Folders by Name
+- Recursive Search Inside Subdirectories
+- Menu-Driven Console Interface
 
 ---
 
@@ -29,7 +24,9 @@ This project allows users to perform basic file management operations through a 
 
 - Java
 - Object-Oriented Programming (OOP)
-- Java File Handling
+- Java File Handling (`File` Class)
+- Recursion
+- Arrays
 - IntelliJ IDEA
 - Git & GitHub
 
@@ -38,12 +35,13 @@ This project allows users to perform basic file management operations through a 
 ## Project Structure
 
 ```
-MiniFileExplorer
+MiniFileExplorer/
 │
-├── src
-│   └── com.fileexplorer
-│       ├── Main.java
-│       └── FileManager.java
+├── src/
+│   └── com/
+│       └── fileexplorer/
+│           ├── Main.java
+│           └── FileManager.java
 │
 ├── README.md
 └── .gitignore
@@ -51,16 +49,21 @@ MiniFileExplorer
 
 ---
 
-## How to Run
+## Skills Demonstrated
 
-1. Clone the repository.
-2. Open the project in IntelliJ IDEA.
-3. Run `Main.java`.
-4. Choose an option from the menu.
+- Classes & Objects
+- Methods
+- Exception Handling
+- File Handling
+- Directory Traversal
+- Recursion
+- Arrays
+- Input Validation
+- Modular Code Design
 
 ---
 
-## Example
+## Menu
 
 ```
 ========== MINI FILE EXPLORER ==========
@@ -68,41 +71,98 @@ MiniFileExplorer
 2. Create Folder
 3. Delete
 4. Rename
-5. Exit
+5. Show Files
+6. Show Folders
+7. Search
+8. Exit
+```
+
+---
+
+## How to Run
+
+1. Clone the repository.
+
+```bash
+git clone https://github.com/<your-username>/MiniFileExplorer.git
+```
+
+2. Open the project in IntelliJ IDEA.
+3. Run `Main.java`.
+4. Use the menu to perform file operations.
+
+---
+
+## Sample Output
+
+```
+========== MINI FILE EXPLORER ==========
+1. Create File
+2. Create Folder
+3. Delete
+4. Rename
+5. Show Files
+6. Show Folders
+7. Search
+8. Exit
 
 Enter your choice:
 ```
 
 ---
 
-## Learning Objectives
+## Learning Progress
 
-This project helped me practice:
-
-- Java Fundamentals
+### ✅ Day 1
+- Project Setup
+- Menu System
+- Scanner
 - Methods
-- Classes & Objects
-- Object-Oriented Programming
+- Loops
+- Switch Statement
+
+### ✅ Day 2
 - File Handling
+- Create File
+- Create Folder
+- Delete
+- Rename
 - Exception Handling
-- Git & GitHub
+
+### ✅ Day 3
+- Display Files
+- Display Folders
+- Recursive Search
+- Directory Traversal
+- Arrays
+- `listFiles()`
 
 ---
 
 ## Future Improvements
 
-- File search
-- Copy files
-- Move files
-- Recursive folder deletion
-- Better user interface
-- File metadata
-- Unit testing
+- File Details (Size, Extension, Last Modified)
+- Directory Navigation
+- Copy Files
+- Move Files
+- Recursive Folder Delete
+- Hidden File Support
+- Better Error Handling
+- Unit Testing
+- Logging
 
 ---
 
 ## Author
 
-Rahul Thota
+**Rahul Thota**
 
-GitHub: https://github.com/rahulthota172737-bit
+B.Tech CSE (AI & ML)
+
+Learning Java Backend Development through hands-on projects.
+
+---
+
+## License
+
+This project is developed for learning purposes.
