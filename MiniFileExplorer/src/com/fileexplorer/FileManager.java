@@ -3,8 +3,16 @@ package com.fileexplorer;
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
+import java.io.File;
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 
 public class FileManager {
+    private static File currentDirectory =new File(System.getProperty("user.dir"));
+
 
     public static void createNewFile(Scanner sc){
         System.out.print("Enter the file name including extension:");
@@ -296,4 +304,95 @@ public class FileManager {
 
         return false;
     }
+    public static void Filedetails(Scanner sc){
+        System.out.print("Enter file/folder path: ");
+        String path = sc.nextLine().trim();
+
+        File file = new File(path);
+
+        if (!file.exists()) {
+            System.out.println("File or Folder does not exist.");
+            return;
+        }
+
+
+        System.out.println("Name: " + file.getName());
+
+        if (file.isFile()) {
+            System.out.println("Type: File");
+        } else {
+            System.out.println("Type: Directory");
+        }
+
+        if (file.isFile()) {
+            String name = file.getName();
+            int index = name.lastIndexOf('.');
+
+            if (index != -1) {
+                System.out.println("Extension : " + name.substring(index + 1));
+            } else {
+                System.out.println("Extension : No Extension");
+            }
+        } else {
+            System.out.println("Extension : N/A");
+        }
+
+        if (file.isFile()) {
+            long size = file.length();
+
+            if (size < 1024) {
+                System.out.println("Size: " + size + " Bytes");
+            } else if (size < 1024 * 1024) {
+                System.out.printf("Size: %.2f KB%n", size / 1024.0);
+            } else {
+                System.out.printf("Size: %.2f MB%n", size / (1024.0 * 1024));
+            }
+        } else {
+            System.out.println("Size: --");
+        }
+
+        System.out.println("Absolute Path  : " + file.getAbsolutePath());
+
+        Instant instant = Instant.ofEpochMilli(file.lastModified());
+
+        ZonedDateTime dateTime = instant.atZone(ZoneId.systemDefault());
+
+        DateTimeFormatter formatter =
+                DateTimeFormatter.ofPattern("dd-MM-yyyy hh:mm:ss a");
+
+        System.out.println("Last Modified  : " + dateTime.format(formatter));
+    }
+    public static void changeDirectory(Scanner sc) {
+
+        System.out.print("Enter directory path: ");
+        String path = sc.nextLine().trim();
+
+        File directory = new File(path);
+
+        if (!directory.isAbsolute()) {
+            directory = new File(currentDirectory, path);
+        }
+
+        if (!directory.exists()) {
+            System.out.println("Directory does not exist.");
+            return;
+        }
+
+        if (!directory.isDirectory()) {
+            System.out.println("The given path is not a directory.");
+            return;
+        }
+
+        currentDirectory = directory.getAbsoluteFile();
+
+        System.out.println("Current directory changed successfully.");
+        System.out.println("Current Directory: " + currentDirectory.getAbsolutePath());
+    }
+
+    public static void showCurrentDirectory() {
+        System.out.println("\n===== Current Directory =====");
+        System.out.println(currentDirectory.getAbsolutePath());
+    }
 }
+
+
