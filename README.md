@@ -1,47 +1,99 @@
-# Mini File Explorer
+# 📂 Mini File Explorer
 
-A console-based File Explorer built using Java. This project demonstrates Object-Oriented Programming (OOP), Java File Handling, and directory traversal by implementing common file management operations.
-
----
-
-## Features
-
-### ✅ Completed (Day 3)
-
-- Create File
-- Create Folder
-- Delete File/Folder
-- Rename File/Folder
-- List Files
-- List Folders
-- Search Files/Folders by Name
-- Recursive Search Inside Subdirectories
-- Menu-Driven Console Interface
+A console-based file management application built in **Java** that simulates the basic functionality of a file explorer. This project demonstrates **Object-Oriented Programming (OOP)** concepts, Java File Handling, Java NIO, recursion, sorting, and directory management.
 
 ---
 
-## Technologies Used
+## 🚀 Features
+
+### 📁 File & Folder Operations
+- Create new files
+- Create new folders
+- Delete files and folders
+- Rename files and folders
+
+### 📂 Directory Navigation
+- Change current working directory
+- Display current working directory
+
+### 🔍 Search
+- Recursive file search
+
+### 📋 File Information
+- Display file/folder details
+- File name
+- File type
+- File extension
+- File size
+- Absolute path
+- Last modified date
+
+### 📄 Directory Listing
+- Show all files
+- Show all folders
+
+### 📦 File Management
+- Copy files
+- Move files
+
+### 📊 Sorting
+- Sort files by
+  - Name
+  - Size
+  - Last Modified Date
+
+---
+
+# 🛠 Technologies Used
 
 - Java
 - Object-Oriented Programming (OOP)
-- Java File Handling (`File` Class)
-- Recursion
-- Arrays
+- Java File Handling (`java.io.File`)
+- Java NIO (`Files`, `Path`)
+- Java Time API
+- Collections & Arrays
+- Comparator
 - IntelliJ IDEA
 - Git & GitHub
 
 ---
 
-## Project Structure
+# 🧱 OOP Concepts Demonstrated
+
+✅ Encapsulation
+
+- Private data members
+- Controlled access to project data
+
+✅ Abstraction
+
+- Implemented using `FileInterface`
+
+✅ Polymorphism
+
+- Interface reference used with implementation
+
+```java
+FileInterface fileManager = new FileManager();
+```
+
+✅ Inheritance
+
+- Extendable architecture for advanced file operations
+
+---
+
+# 📁 Project Structure
 
 ```
 MiniFileExplorer/
 │
 ├── src/
-│   └── com/
-│       └── fileexplorer/
-│           ├── Main.java
-│           └── FileManager.java
+│   └── com/fileexplorer/
+│       ├── Main.java
+│       ├── FileInterface.java
+│       ├── FileManager.java
+│       └── AdvancedFileManager.java (optional)
 │
 ├── README.md
 └── .gitignore
@@ -49,120 +101,70 @@ MiniFileExplorer/
 
 ---
 
-## Skills Demonstrated
+# ▶️ How to Run
 
-- Classes & Objects
-- Methods
-- Exception Handling
-- File Handling
-- Directory Traversal
-- Recursion
-- Arrays
-- Input Validation
-- Modular Code Design
-
----
-
-## Menu
+1. Clone the repository
 
 ```
-========== MINI FILE EXPLORER ==========
-1. Create File
-2. Create Folder
-3. Delete
-4. Rename
-5. Show Files
-6. Show Folders
-7. Search
-8. Exit
+git clone <repository-url>
 ```
 
----
+2. Open the project in IntelliJ IDEA or Eclipse.
 
-## How to Run
+3. Compile and run `Main.java`.
 
-1. Clone the repository.
-
-```bash
-git clone https://github.com/<your-username>/MiniFileExplorer.git
-```
-
-2. Open the project in IntelliJ IDEA.
-3. Run `Main.java`.
 4. Use the menu to perform file operations.
 
 ---
 
-## Sample Output
+# 📚 Concepts Practiced
 
-```
-========== MINI FILE EXPLORER ==========
-1. Create File
-2. Create Folder
-3. Delete
-4. Rename
-5. Show Files
-6. Show Folders
-7. Search
-8. Exit
-
-Enter your choice:
-```
-
----
-
-## Learning Progress
-
-### ✅ Day 1
-- Project Setup
-- Menu System
-- Scanner
-- Methods
-- Loops
-- Switch Statement
-
-### ✅ Day 2
-- File Handling
-- Create File
-- Create Folder
-- Delete
-- Rename
+- Classes & Objects
+- Interfaces
+- Method Overriding
+- Polymorphism
+- Abstraction
+- Encapsulation
+- Inheritance
 - Exception Handling
-
-### ✅ Day 3
-- Display Files
-- Display Folders
-- Recursive Search
-- Directory Traversal
+- File Handling
+- Java NIO
+- Recursion
 - Arrays
-- `listFiles()`
+- Comparator
+- Directory Traversal
 
 ---
 
-## Future Improvements
+# 🎯 Learning Objectives
 
-- File Details (Size, Extension, Last Modified)
-- Directory Navigation
-- Copy Files
-- Move Files
-- Recursive Folder Delete
-- Hidden File Support
-- Better Error Handling
-- Unit Testing
+This project was built to strengthen:
+
+- Java Programming
+- Object-Oriented Design
+- File System Operations
+- Clean Code Practices
+- Git & GitHub Workflow
+- Console Application Development
+
+---
+
+# 📌 Future Improvements
+
+- File compression (ZIP)
+- Recursive folder copy
+- Recursive folder delete
+- File encryption/decryption
+- Hidden file support
+- File permissions
 - Logging
+- Unit testing using JUnit
+- GUI using JavaFX or Swing
 
 ---
 
-## Author
+# 👨‍💻 Author
 
-**Rahul Thota**
-
-B.Tech CSE (AI & ML)
-
-Learning Java Backend Development through hands-on projects.
-
----
-
-## License
+Developed as part of a Java Backend Development roadmap to master Core Java, OOP, File Handling, and Software Engineering fundamentals. License
 
 This project is developed for learning purposes.
