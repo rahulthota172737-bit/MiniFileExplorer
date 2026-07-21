@@ -19,6 +19,9 @@ public class Main {
         System.out.println("9. Change Directory");
         System.out.println("10. Show Current Directory");
         System.out.println("11. Exit");
+        System.out.println();
+        System.out.println();
+        System.out.println("");
     }
 
     public static void processChoice(int choice,Scanner sc,FileManager fileManager){
@@ -64,7 +67,19 @@ public class Main {
                 System.out.println();
                 break;
             case 11:
-                System.out.println("Thank you for using Mini File Explorer.");
+                fileManager.CopyFile(sc);
+                System.out.println();
+                break;
+            case 12:
+                fileManager.MoveFile(sc);
+                System.out.println();
+                break;
+            case 13:
+                fileManager.sortFiles(sc);
+                System.out.println();
+                break;
+            case 14:
+                System.out.println("Thank you for using Our File Explorer");
                 System.out.println();
                 break;
             default:
@@ -76,7 +91,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         FileManager fileManager = new FileManager();
         int choice=0;
-        while(choice!=8){
+        while(choice!=14){
             displayMenu();
             System.out.print("Enter your choice:");
             choice=sc.nextInt();
