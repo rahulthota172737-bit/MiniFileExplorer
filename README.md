@@ -1,99 +1,55 @@
-# 📂 Mini File Explorer
+# 📁 Mini File Explorer
 
-A console-based file management application built in **Java** that simulates the basic functionality of a file explorer. This project demonstrates **Object-Oriented Programming (OOP)** concepts, Java File Handling, Java NIO, recursion, sorting, and directory management.
+A console-based File Explorer application built in **Java** that allows users to perform common file and directory operations from the command line. This project was developed to practice **Core Java**, **Object-Oriented Programming (OOP)**, **Java File Handling**, and **clean project organization**.
 
 ---
 
 ## 🚀 Features
 
-### 📁 File & Folder Operations
-- Create new files
-- Create new folders
-- Delete files and folders
-- Rename files and folders
-
-### 📂 Directory Navigation
-- Change current working directory
-- Display current working directory
-
-### 🔍 Search
-- Recursive file search
-
-### 📋 File Information
-- Display file/folder details
-- File name
-- File type
-- File extension
-- File size
-- Absolute path
-- Last modified date
-
-### 📄 Directory Listing
-- Show all files
-- Show all folders
-
-### 📦 File Management
-- Copy files
-- Move files
-
-### 📊 Sorting
-- Sort files by
-  - Name
-  - Size
-  - Last Modified Date
+- 📄 Create File
+- 📁 Create Folder
+- 🗑️ Delete File/Folder
+- ✏️ Rename File/Folder
+- 🔍 Search File/Folder
+- 🔄 Recursive Search
+- 📂 List Files
+- 📁 List Folders
+- ℹ️ View File Details
+- 📋 Copy File
+- 🚚 Move File
+- 🔤 Sort Files by Name
+- 📏 Sort Files by Size
+- 📅 Sort Files by Last Modified Date
+- 📍 Change Current Directory
+- 🖥️ Show Current Directory
+- ⚠️ Exception Handling for Invalid Operations
 
 ---
 
-# 🛠 Technologies Used
+## 🛠️ Technologies Used
 
 - Java
+- Java NIO (`java.nio.file`)
+- Java IO (`java.io`)
 - Object-Oriented Programming (OOP)
-- Java File Handling (`java.io.File`)
-- Java NIO (`Files`, `Path`)
-- Java Time API
-- Collections & Arrays
-- Comparator
-- IntelliJ IDEA
-- Git & GitHub
 
 ---
 
-# 🧱 OOP Concepts Demonstrated
-
-✅ Encapsulation
-
-- Private data members
-- Controlled access to project data
-
-✅ Abstraction
-
-- Implemented using `FileInterface`
-
-✅ Polymorphism
-
-- Interface reference used with implementation
-
-```java
-FileInterface fileManager = new FileManager();
-```
-
-✅ Inheritance
-
-- Extendable architecture for advanced file operations
-
----
-
-# 📁 Project Structure
+## 🏗️ Project Structure
 
 ```
 MiniFileExplorer/
 │
 ├── src/
-│   └── com/fileexplorer/
+│   └── fileexplorer/
 │       ├── Main.java
-│       ├── FileInterface.java
-│       ├── FileManager.java
-│       └── AdvancedFileManager.java (optional)
+│       ├── interfaces/
+│       │     └── FileInterface.java
+│       └── manager/
+│             ├── FileManager.java
+│             ├── SearchManager.java
+│             ├── DirectoryManager.java
+│             └── AdvancedFileManager.java
 │
 ├── README.md
 └── .gitignore
@@ -101,70 +57,112 @@ MiniFileExplorer/
 
 ---
 
-# ▶️ How to Run
+## 📚 OOP Concepts Used
+
+### Encapsulation
+- Organized code into multiple classes with clear responsibilities.
+
+### Abstraction
+- Implemented using the `FileInterface`.
+
+### Polymorphism
+- Used interface reference:
+
+```java
+FileInterface fileManager = new FileManager();
+```
+
+### Composition
+- `FileManager` delegates responsibilities to:
+  - `SearchManager`
+  - `DirectoryManager`
+  - `AdvancedFileManager`
+
+---
+
+## 📂 Functional Modules
+
+### FileManager
+Handles core file operations:
+- Create File
+- Create Folder
+- Delete
+- Rename
+- File Details
+
+### SearchManager
+Handles:
+- Search
+- Recursive Search
+- List Files
+- List Folders
+
+### DirectoryManager
+Handles:
+- Change Directory
+- Show Current Directory
+
+### AdvancedFileManager
+Handles:
+- Copy File
+- Move File
+- Sort Files
+
+---
+
+## ▶️ How to Run
 
 1. Clone the repository
 
+```bash
+git clone https://github.com/YOUR_USERNAME/MiniFileExplorer.git
 ```
-git clone <repository-url>
+
+2. Open the project in IntelliJ IDEA (or any Java IDE).
+
+3. Compile and run:
+
+```
+Main.java
 ```
 
-2. Open the project in IntelliJ IDEA or Eclipse.
-
-3. Compile and run `Main.java`.
-
-4. Use the menu to perform file operations.
+4. Use the menu displayed in the console.
 
 ---
 
-# 📚 Concepts Practiced
+## 📖 What I Learned
 
-- Classes & Objects
+- Java File Handling
+- Java NIO API
+- Object-Oriented Programming
 - Interfaces
-- Method Overriding
-- Polymorphism
-- Abstraction
-- Encapsulation
-- Inheritance
+- Package Organization
+- Composition
 - Exception Handling
-- File Handling
-- Java NIO
-- Recursion
-- Arrays
-- Comparator
-- Directory Traversal
-
----
-
-# 🎯 Learning Objectives
-
-This project was built to strengthen:
-
-- Java Programming
-- Object-Oriented Design
-- File System Operations
 - Clean Code Practices
-- Git & GitHub Workflow
-- Console Application Development
+- Git & GitHub
 
 ---
 
-# 📌 Future Improvements
+## 🔮 Future Improvements
 
-- File compression (ZIP)
-- Recursive folder copy
-- Recursive folder delete
-- File encryption/decryption
-- Hidden file support
-- File permissions
-- Logging
-- Unit testing using JUnit
-- GUI using JavaFX or Swing
+- File Compression
+- File Permissions Management
+- Recent Files History
+- Favorites
+- Hidden Files Support
+- GUI Version using JavaFX
 
 ---
 
-# 👨‍💻 Author
+## 👨‍💻 Author
 
-Developed as part of a Java Backend Development roadmap to master Core Java, OOP, File Handling, and Software Engineering fundamentals. License
+**Rahul**
 
-This project is developed for learning purposes.
+B.Tech CSE (AI & ML)
+
+Learning Java Backend Development through project-based learning.
+
+---
+
+## ⭐ If you found this project useful, consider giving it a star!
